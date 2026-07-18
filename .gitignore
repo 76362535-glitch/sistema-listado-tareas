@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+.env
+npm-debug.log*
+.DS_Store
+data/tasks.test.json
+
+.vs/
+
+.vs/

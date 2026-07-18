@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Revisar informe del proyecto",
+    "description": "Verificar estructura, conclusiones y referencias.",
+    "completed": false,
+    "createdAt": "2026-07-18T00:00:00.000Z",
+    "updatedAt": "2026-07-18T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "title": "Subir aplicación a GitHub",
+    "description": "Crear repositorio y publicar la rama develop.",
+    "completed": true,
+    "createdAt": "2026-07-18T00:10:00.000Z",
+    "updatedAt": "2026-07-18T00:20:00.000Z"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "name": "sistema-listado-tareas",
+  "version": "1.0.0",
+  "description": "Aplicación web de listado de tareas con Node.js, Express, JSON, Jest y Docker.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --coverage --runInBand"
+  },
+  "keywords": ["todo", "tasks", "node", "express", "jest", "docker"],
+  "author": "Sandro Matos Bravo",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ]
+  }
+}

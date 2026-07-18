@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Construcción de Software</p>
+        <h1>Task Manager</h1>
+        <p class="subtitle">Organiza tus actividades de forma simple y segura.</p>
+      </div>
+      <div class="hero-badge">Node.js + Express</div>
+    </header>
+
+    <section class="stats" aria-label="Resumen">
+      <article><strong id="totalCount">0</strong><span>Total</span></article>
+      <article><strong id="pendingCount">0</strong><span>Pendientes</span></article>
+      <article><strong id="completedCount">0</strong><span>Completadas</span></article>
+    </section>
+
+    <section class="panel">
+      <form id="taskForm" class="task-form">
+        <input type="hidden" id="taskId" />
+        <div class="field">
+          <label for="title">Título</label>
+          <input id="title" maxlength="100" required placeholder="Ej. Preparar presentación" />
+        </div>
+        <div class="field">
+          <label for="description">Descripción</label>
+          <textarea id="description" maxlength="300" placeholder="Detalle opcional"></textarea>
+        </div>
+        <div class="actions">
+          <button type="submit" class="primary" id="submitButton">Agregar tarea</button>
+          <button type="button" class="secondary hidden" id="cancelButton">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="Buscar tareas..." />
+      <div class="filters" role="group" aria-label="Filtros">
+        <button class="filter active" data-filter="all">Todas</button>
+        <button class="filter" data-filter="pending">Pendientes</button>
+        <button class="filter" data-filter="completed">Completadas</button>
+      </div>
+    </section>
+
+    <section id="message" class="message hidden"></section>
+    <section id="taskList" class="task-list" aria-live="polite"></section>
+
+    <footer>
+      Proyecto académico de Construcción de Software · Sandro Matos Bravo
+    </footer>
+  </main>
+
+  <template id="taskTemplate">
+    <article class="task-card">
+      <button class="check-button" aria-label="Cambiar estado"></button>
+      <div class="task-content">
+        <h2></h2>
+        <p></p>
+        <small></small>
+      </div>
+      <div class="task-actions">
+        <button class="edit-button">Editar</button>
+        <button class="delete-button">Eliminar</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
